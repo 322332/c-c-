@@ -62,9 +62,7 @@ matrix(int x,int y, char val){
 			else
 				value[i][j]=0;	
 	}
-
-
-//yeninden boyutlandırma	
+	
 void resize(int x, int y){
 		
 		
@@ -75,7 +73,7 @@ void resize(int x, int y){
 	
 	
 	
-	//boş dışardan gelen değere gööre ara matris tanımladık 
+	//boÃ¾ dÃ½Ã¾ardan gelen deÃ°ere gÃ¶Ã¶re ara matris tanÃ½mladÃ½k 
 	int **tmp = new int*[height];
 	
 	for(int i=0;i<height;i++){
@@ -83,7 +81,7 @@ void resize(int x, int y){
 		
 	}
 	
-	//oluşturduğumuz boş matrisin içine var matrisin değerlerini ekledik eğer yeni oluşturulan matris var olan matristen büyükse kalan boş hücreler sıfır değeri setle
+	//oluÃ¾turduÃ°umuz boÃ¾ matrisin iÃ§ine var matrisin deÃ°erlerini ekledik eÃ°er yeni oluÃ¾turulan matris var olan matristen bÃ¼yÃ¼kse kalan boÃ¾ hÃ¼creler sÃ½fÃ½r deÃ°eri setle
 		for(int i=0;i<height;i++){
 				for(int j=0;j<width;j++){
 				if(i<tmpwidth && j<tmpheight)
@@ -98,7 +96,7 @@ void resize(int x, int y){
 	delete [] value[i];
 	delete []value;
 	
-	//dışardan gelen değerlere göre var olan matris tekrar yaratılır 
+	//dÃ½Ã¾ardan gelen deÃ°erlere gÃ¶re var olan matris tekrar yaratÃ½lÃ½r 
 	 value = new int*[height];
 	
 	for(int i=0;i<height;i++){
@@ -106,7 +104,7 @@ void resize(int x, int y){
 		
 	}
 	
-	//var olan matrisin içine yeni oluşturulan ara matrisin değerleri atanır 
+	//var olan matrisin iÃ§ine yeni oluÃ¾turulan ara matrisin deÃ°erleri atanÃ½r 
 	for(int i=0;i<height;i++)
 		for(int j=0;j<width;j++)
 			value[i][j]=tmp[i][j];
@@ -120,7 +118,6 @@ void resize(int x, int y){
 	
 	}
 	
-//yazdırma
 void printMatrix(){
 			for(int i=0;i<height;i++){
 					for(int j=0;j<width;j++)
