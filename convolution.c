@@ -23,18 +23,14 @@ int m, n;
 	for(n = 0; n < Length; n++){
 		int tmp = 0;
 		for(m = 0; m < Length; m++){
-			//printf("(%d*%d) ", n-m, m);
 			if((n-m) >= 0 ){
-				//printf("%d %d   ",h[n-m],x[m]);
 				tmp += h[n-m]*x[m];	
 			}
 			else{
-				//printf("%d %d   ",h[Length+(n-m)],x[m]);
 				tmp += h[Length+(n-m)]*x[m];
 			}
 		}
 		y[n] = tmp;
-	//	printf("\n");
 	}
 }
 
