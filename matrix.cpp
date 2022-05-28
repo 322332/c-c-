@@ -73,7 +73,6 @@ void resize(int x, int y){
 	
 	
 	
-	//boþ dýþardan gelen deðere gööre ara matris tanýmladýk 
 	int **tmp = new int*[height];
 	
 	for(int i=0;i<height;i++){
@@ -81,8 +80,7 @@ void resize(int x, int y){
 		
 	}
 	
-	//oluþturduðumuz boþ matrisin içine var matrisin deðerlerini ekledik eðer yeni oluþturulan matris var olan matristen büyükse kalan boþ hücreler sýfýr deðeri setle
-		for(int i=0;i<height;i++){
+	for(int i=0;i<height;i++){
 				for(int j=0;j<width;j++){
 				if(i<tmpwidth && j<tmpheight)
 				tmp[i][j]=value[i][j];
@@ -91,12 +89,10 @@ void resize(int x, int y){
 			}
 		}
 
-		//var olan matris silinir 
 		for(int i=0;i<tmpheight;i++)
 	delete [] value[i];
 	delete []value;
 	
-	//dýþardan gelen deðerlere göre var olan matris tekrar yaratýlýr 
 	 value = new int*[height];
 	
 	for(int i=0;i<height;i++){
@@ -104,13 +100,11 @@ void resize(int x, int y){
 		
 	}
 	
-	//var olan matrisin içine yeni oluþturulan ara matrisin deðerleri atanýr 
 	for(int i=0;i<height;i++)
 		for(int j=0;j<width;j++)
 			value[i][j]=tmp[i][j];
 			
-			
-	//ara matris silinir 		
+				
 	for(int i=0;i<height;i++)
 	delete [] tmp[i];
 	delete []tmp;
